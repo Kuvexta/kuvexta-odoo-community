@@ -1,16 +1,23 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "odoo_series": "19.0",
   "source_repository": "Kuvexta/odoo-community-tools",
+  "source_license_correction_pr": 187,
   "repository_role": "community",
   "planned_modules": {
-    "ecommerce_barcode_search": "planned_upstream_third_party",
-    "kt_ecommerce_barcode_search_patch": "planned_agpl_derived"
+    "ecommerce_barcode_search": "ready_preserve_upstream_agpl",
+    "kt_ecommerce_barcode_search_patch": "ready_after_source_agpl_correction"
   },
+  "wave_1": [
+    "ecommerce_barcode_search",
+    "kt_ecommerce_barcode_search_patch"
+  ],
   "rules": {
     "preserve_upstream_copyright": true,
     "preserve_upstream_license": true,
     "may_depend_on_professional": false,
-    "proprietary_relicensing_allowed": false
+    "proprietary_relicensing_allowed": false,
+    "license_change_during_physical_migration_allowed": false,
+    "required_license": "AGPL-3"
   }
 }
