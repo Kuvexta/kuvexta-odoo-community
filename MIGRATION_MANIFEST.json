@@ -2,11 +2,13 @@
   "schema_version": 2,
   "odoo_series": "19.0",
   "source_repository": "Kuvexta/odoo-community-tools",
-  "source_license_correction_pr": 187,
+  "source_commit": "9ad287fd6b1c3c3e0590aaa3704f9831a44f2d6d",
+  "source_license_correction_pr": 189,
+  "source_license_history": [187, 189],
   "repository_role": "community",
   "planned_modules": {
     "ecommerce_barcode_search": "ready_preserve_upstream_agpl",
-    "kt_ecommerce_barcode_search_patch": "ready_after_source_agpl_correction"
+    "kt_ecommerce_barcode_search_patch": "ready_preserve_agpl"
   },
   "wave_1": [
     "ecommerce_barcode_search",

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "source_repository": "Kuvexta/odoo-community-tools",
+  "source_commit": "9ad287fd6b1c3c3e0590aaa3704f9831a44f2d6d",
+  "source_license_prs": [187, 189],
+  "module": "kt_ecommerce_barcode_search_patch",
+  "source_tree_sha": "c9de2a9ef935207b56b25f85243b6ca9322c7492",
+  "target_tree_sha": "c9de2a9ef935207b56b25f85243b6ca9322c7492",
+  "exact_tree_match": true,
+  "license_preserved": "AGPL-3",
+  "source_deleted": false,
+  "verified_files": 14
+}
