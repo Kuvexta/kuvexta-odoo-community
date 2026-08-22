@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Agrega el botón de linterna al pie del modal de escaneo,
+         vía herencia de vista — sin modificar
+         ecommerce_barcode_search.product_barcode en absoluto. -->
+    <template id="product_barcode_torch_button"
+              inherit_id="ecommerce_barcode_search.product_barcode">
+        <xpath expr="//div[@id='barcodeModal']//div[hasclass('modal-footer')]"
+               position="inside">
+            <button type="button"
+                    class="btn btn-outline-secondary d-none kt_torch_toggle"
+                    title="Encender/apagar linterna">
+                <i class="fa fa-bolt"/>
+            </button>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,43 @@
+/* PARCHE Kuvexta (02/08/2026): el módulo original de Cybrosys no
+   traía ningún estilo propio para el contenedor de video (#barcode_id)
+   — Quagga2 inyecta el <video>/<canvas> con el tamaño que le da la
+   gana según la resolución de la cámara, sin que el contenedor los
+   restrinja. En la práctica esto se veía como una franja diminuta e
+   inutilizable, especialmente en celular. Se agrega un tamaño fijo y
+   responsivo, con el video recortado (object-fit: cover) para llenar
+   siempre el espacio disponible sin deformarse. */
+
+#barcodeModal .modal-body {
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+#barcode_id {
+    position: relative;
+    width: 100%;
+    height: min(320px, 45vh);
+    overflow: hidden;
+    padding: 0 !important;
+}
+
+@media (min-width: 768px) {
+    #barcode_id {
+        height: min(420px, 55vh);
+    }
+}
+
+#barcode_id video,
+#barcode_id canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+}
+
+/* El canvas de "líneas de escaneo" que dibuja Quagga2 debe quedar
+   encima del video, no debajo, para que se vean las guías. */
+#barcode_id canvas.drawingBuffer {
+    z-index: 1;
+}
