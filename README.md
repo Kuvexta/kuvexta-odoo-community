@@ -17,4 +17,8 @@ Licensing is declared per module and third-party component. AGPL-derived code re
 
 ## Migration status
 
-Initialized for the controlled split from `Kuvexta/odoo-community-tools`. No module is migrated until provenance and dependency gates permit it.
+The first Community wave is active. `kt_ecommerce_barcode_search_patch` is physically migrated under AGPL-3. Its required upstream addon, `ecommerce_barcode_search` from Cybrosys Techno Solutions, is intentionally **not vendored** in this repository: it is recorded as an external pinned AGPL-3 dependency in `UPSTREAM_SOURCES.json`.
+
+This keeps upstream ownership explicit, avoids an unnecessary third-party fork, and makes updates auditable. Before installing the Kuvexta patch, provide the pinned `ecommerce_barcode_search` addon from `CybroOdoo/CybroAddons` at the recorded commit in the Odoo addons path.
+
+`MIGRATION_MANIFEST.json` defines which Community addons are physical versus external upstream dependencies. `scripts/validate_community_repository.py` blocks proprietary licensing, unexpected local addons, missing pinned sources, and Community dependencies that cross into Professional.
