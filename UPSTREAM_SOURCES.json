@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "odoo_series": "19.0",
+  "sources": {
+    "ecommerce_barcode_search": {
+      "repository": "CybroOdoo/CybroAddons",
+      "branch_reference": "19.0",
+      "module_path": "ecommerce_barcode_search",
+      "commit": "ec71b5e54d047fde985074f15c2ae5c94ee98fd2",
+      "license": "AGPL-3",
+      "distribution_mode": "external_pinned_dependency",
+      "required_by": [
+        "kt_ecommerce_barcode_search_patch"
+      ],
+      "verified_top_level_objects": {
+        "README.rst": "15ee0f11891837d84a11297f56a805c05bc57efb",
+        "__init__.py": "3f0185d78839e6c29804b9ebd0d9e191f471c15a",
+        "__manifest__.py": "77fc4b5d3e48a77e45dfc2394cd5b8e05b26d79e",
+        "controllers/": "b32dd8ec722653aff3864b1c2f68bf17cd687107",
+        "doc/": "de6c3eb61ba5644391f8cbc79a3f48986df6916d",
+        "models/": "b863034d8d0b1b5d099bc92b4b99af5ea00b1ff1",
+        "static/": "c422931aba45a4e055722cf8431259ef775f2f39",
+        "tests/": "6e35add0f46c3245169953c98456e757e17322e7",
+        "views/": "e23cbffa49f7462b0829788bc88d5e4951a35b9d"
+      }
+    }
+  }
+}
