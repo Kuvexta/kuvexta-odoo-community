@@ -1,5 +1,5 @@
 {
-  "schema_version": 3,
+  "schema_version": 4,
   "odoo_series": "19.0",
   "source_repository": "Kuvexta/odoo-community-tools",
   "source_commit": "9ad287fd6b1c3c3e0590aaa3704f9831a44f2d6d",
@@ -10,23 +10,48 @@
     "ecommerce_barcode_search": "external_pinned_upstream_agpl",
     "kt_ecommerce_barcode_search_patch": "migrated_agpl"
   },
-  "wave_1": [
-    "ecommerce_barcode_search",
-    "kt_ecommerce_barcode_search_patch"
-  ],
   "physical_modules": [
     "kt_ecommerce_barcode_search_patch"
   ],
   "external_upstream_modules": [
     "ecommerce_barcode_search"
   ],
+  "migration_receipts": {
+    "kt_ecommerce_barcode_search_patch": "MIGRATION_RECEIPT_PATCH_V1.json"
+  },
+  "wave_1": [
+    "ecommerce_barcode_search",
+    "kt_ecommerce_barcode_search_patch"
+  ],
   "rules": {
     "preserve_upstream_copyright": true,
     "preserve_upstream_license": true,
     "may_depend_on_professional": false,
+    "may_depend_on_vendor_adapters": false,
+    "may_depend_on_internal": false,
     "proprietary_relicensing_allowed": false,
     "license_change_during_physical_migration_allowed": false,
     "required_license": "AGPL-3",
-    "vendor_upstream_source_in_repository": false
-  }
+    "vendor_upstream_source_in_repository": false,
+    "unnecessary_upstream_vendorization_allowed": false
+  },
+  "receipt_contract": {
+    "module_must_match": true,
+    "source_repository_must_match": true,
+    "source_and_target_tree_must_match": true,
+    "exact_tree_match_must_be_true": true,
+    "receipt_license_must_match_manifest": true,
+    "source_deleted_must_be_false_for_initial_migration": true
+  },
+  "upstream_contract": {
+    "must_be_recorded_in_UPSTREAM_SOURCES": true,
+    "full_commit_sha_required": true,
+    "verified_object_shas_must_be_full_sha": true,
+    "physical_vendorization_forbidden_when_distribution_mode_is_external_pinned_dependency": true
+  },
+  "notes": [
+    "Physical Kuvexta Community addons and external upstream dependencies are separate concepts and must never be conflated in topology or migration receipts.",
+    "The Cybrosys addon remains external/pinned; the Kuvexta patch remains physically migrated under AGPL-3 with exact tree evidence.",
+    "A soft/dynamic dependency cannot be used to cross into Professional, Vendor Adapters or Internal."
+  ]
 }
