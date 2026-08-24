@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate Kuvexta Community physical, upstream and license boundaries."""
+"""Validate Kuvexta Community physical, upstream, license and test boundaries."""
 
 from __future__ import annotations
 
@@ -13,8 +13,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 POLICY = ROOT / "MIGRATION_MANIFEST.json"
 UPSTREAM_POLICY = ROOT / "UPSTREAM_SOURCES.json"
+TEST_ROOT = ROOT / "tests"
 LOGGER = logging.getLogger(__name__)
-IGNORED_DIRS = {".git", ".github", "scripts"}
+IGNORED_DIRS = {".git", ".github", "scripts", "tests"}
 LOCAL_STATUSES = {"migrated_agpl"}
 EXTERNAL_STATUSES = {"external_pinned_upstream_agpl"}
 SHA1_RE = re.compile(r"^[0-9a-f]{40}$")
@@ -103,6 +104,12 @@ def main() -> int:
     external = set(upstream_sources)
     addons = discover_addons()
     errors: list[str] = []
+
+    repo_tests = sorted(TEST_ROOT.glob("test_*.py")) if TEST_ROOT.is_dir() else []
+    if physical and not repo_tests:
+        errors.append(
+            "Community physical addons require at least one repository-level automated contract test under tests/test_*.py"
+        )
 
     if policy.get("schema_version") != 4:
         errors.append("Community MIGRATION_MANIFEST schema_version must be 4")
@@ -196,9 +203,10 @@ def main() -> int:
             LOGGER.error(error)
         return 1
     LOGGER.info(
-        "Community boundary valid: %d physical addon(s), %d pinned upstream source(s), receipt/fingerprints coherent.",
+        "Community boundary valid: %d physical addon(s), %d pinned upstream source(s), %d contract test file(s), receipt/fingerprints coherent.",
         len(addons),
         len(external),
+        len(repo_tests),
     )
     return 0
 

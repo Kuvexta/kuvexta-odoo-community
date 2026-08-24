@@ -23,3 +23,5 @@ jobs:
         run: python3 -m json.tool UPSTREAM_SOURCES.json >/dev/null
       - name: Validate Community repository boundary
         run: python3 scripts/validate_community_repository.py
+      - name: Run Community contract tests
+        run: python3 -m unittest discover -s tests -p 'test_*.py' -v
