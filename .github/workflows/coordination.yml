@@ -60,4 +60,3 @@ jobs:
           --repository community
           --head-sha "$HEAD_SHA"
           --pull-request "$PR_URL"
-
