@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "receipt_type": "post_migration_change",
+  "module": "kt_ecommerce_barcode_search_patch",
+  "base_migration_receipt": "MIGRATION_RECEIPT_PATCH_V1.json",
+  "base_tree_sha": "c9de2a9ef935207b56b25f85243b6ca9322c7492",
+  "target_repository": "Kuvexta/kuvexta-odoo-community",
+  "target_branch": "19.0",
+  "target_tree_sha": "f38a9715d16740743b8ce0f6c569321d065f2f72",
+  "effective_license": "AGPL-3",
+  "scope": "documentation_governance",
+  "behavior_change": false,
+  "license_change": false,
+  "vendor_source_change": false,
+  "relicensing": false,
+  "changed_files": [
+    "MANUAL_ES.md",
+    "README.rst"
+  ]
+}

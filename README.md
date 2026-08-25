@@ -22,3 +22,11 @@ The first Community wave is active. `kt_ecommerce_barcode_search_patch` is physi
 This keeps upstream ownership explicit, avoids an unnecessary third-party fork, and makes updates auditable. Before installing the Kuvexta patch, provide the pinned `ecommerce_barcode_search` addon from `CybroOdoo/CybroAddons` at the recorded commit in the Odoo addons path.
 
 `MIGRATION_MANIFEST.json` defines which Community addons are physical versus external upstream dependencies. `scripts/validate_community_repository.py` blocks proprietary licensing, unexpected local addons, missing pinned sources, and Community dependencies that cross into Professional.
+
+## Ruta documental unificada
+
+Consulte [DOCUMENTATION_MAP.md](DOCUMENTATION_MAP.md). Las políticas,
+investigaciones, diseños de módulos/ecosistemas, FAQ/PQR, incidentes y lecciones
+transversales se mantienen en el repositorio privado
+Kuvexta/kuvexta-odoo-knowledge, empezando por INDEX.yaml. Este repositorio
+conserva la documentación operativa y evidencia que corresponden a su propio rol.

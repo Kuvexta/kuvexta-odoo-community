@@ -10,3 +10,14 @@
 - Do not silently copy an external upstream addon into this repository when its declared mode is `external_pinned_dependency`.
 - Generated inventories/fingerprints are updated from their actual source of truth; never invent hashes or current-state metrics.
 - Immediately before merge, re-fetch exact PR HEAD and base, require all gates green on that HEAD, and use squash plus expected-head guard for automated merges. Base movement requires retest.
+
+## Knowledge routing
+
+- For repository authority and operational changes, start at DOCUMENTATION_MAP.md.
+- For cross-cutting policies, research, ecosystem/module designs, FAQ/PQR,
+  incidents or lessons, read Kuvexta/kuvexta-odoo-knowledge/INDEX.yaml, then
+  filter CATALOG.yaml; do not bulk-load its archive.
+- A Source addon copy is frozen migration evidence. Update README, manual,
+  changelog, tests and current-tree evidence only in the authoritative target.
+- External staging, backup restore, hardware/provider smoke and private Ruleset
+  limitations remain separate gates; never report them closed from local CI.
