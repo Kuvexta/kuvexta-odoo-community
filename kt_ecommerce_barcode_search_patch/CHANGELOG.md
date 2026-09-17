@@ -1,5 +1,14 @@
 # Changelog — kt_ecommerce_barcode_search_patch
 
+## Cobertura funcional — TASK-000066
+
+* Añadidas pruebas originales HTTP anónimas y lógica JavaScript en Chrome con
+  escáner/RPC simulados. Sin cambio de comportamiento del controlador ni de
+  licencia. Casos, límites y ejecución en MANUAL_ES.md; estado real en PR/tarea.
+* Se conserva el historial de migración y se registra un nuevo árbol de pruebas
+  y documentación. La cámara física y la integración completa de assets no
+  quedan acreditadas por los dobles del navegador.
+
 ## 19.0.1.0.3 (22/08/2026)
 
 * Doc-only / gobierno: se corrige `PARCHE_KUVEXTA.md`, que todavía decía

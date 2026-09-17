@@ -24,7 +24,7 @@
     "kt_ecommerce_barcode_search_patch": "MIGRATION_RECEIPT_PATCH_V1.json"
   },
   "current_tree_receipts": {
-    "kt_ecommerce_barcode_search_patch": "development_receipts/kt_ecommerce_barcode_search_patch_documentation_20260825_v1.json"
+    "kt_ecommerce_barcode_search_patch": "development_receipts/kt_ecommerce_barcode_search_patch_tests_20260917_v1.json"
   },
   "wave_1": [
     "ecommerce_barcode_search",
